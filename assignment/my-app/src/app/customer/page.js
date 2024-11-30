@@ -61,7 +61,10 @@ export default function CustomerPage() {
             >
               <div>
                 <Typography variant="h6">{product.pname}</Typography>
-                <Typography variant="body1">Price: ${product.price}</Typography>
+                <Typography variant="body1">Price: €{product.price}</Typography>
+                <Typography variant="body1">
+                  Description: {product.pdesc}
+                </Typography>
               </div>
               <Button
                 onClick={() => putInCart(product.pname)}
@@ -73,6 +76,7 @@ export default function CustomerPage() {
             </div>
           ))}
         </div>
+        <br></br>
       </Container>
     </ThemeProvider>
   );
