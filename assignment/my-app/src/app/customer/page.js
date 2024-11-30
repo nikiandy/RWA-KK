@@ -13,7 +13,7 @@ export default function CustomerPage() {
 
   // Fetch products from the database
   useEffect(() => {
-    fetch("http://localhost:3000/api/getProducts")
+    fetch("/api/getProducts")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -23,7 +23,7 @@ export default function CustomerPage() {
   // Function for putting items into the shopping cart
   function putInCart(pname) {
     console.log("putting in cart: " + pname);
-    fetch("http://localhost:3000/api/putInCart?pname=" + pname);
+    fetch("/api/putInCart?pname=" + pname);
   }
 
   if (!products) return <Typography variant="h5">Loading...</Typography>;

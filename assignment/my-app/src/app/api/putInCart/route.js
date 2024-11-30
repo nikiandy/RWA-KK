@@ -19,8 +19,7 @@ export async function GET(req, res) {
 
   const { MongoClient } = require("mongodb");
 
-  const url =
-    "mongodb+srv://nikiandy:Pass123@cluster0.zb6nt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  const url = process.env.DB_ADDRESS;
 
   const client = new MongoClient(url);
 

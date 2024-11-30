@@ -22,7 +22,7 @@ export default function MyApp() {
   const [weather, setWeatherData] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/getProducts")
+    fetch("/api/getProducts")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
